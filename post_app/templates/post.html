@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Posty w blogu!</h1>
+        <ul>
+        {% for post in object_list%}
+         <li><a href="{% url 'post_detail_view' post.slug %}">{{post.title}}<a/> ({{post.created_at}}) </li>
+         {% endfor %}
+        </ul>
+    {% include "_pagination.html" %}
+<a href="{% url 'post-create' %}">Dodaj nowy post</a>
+{% endblock %}

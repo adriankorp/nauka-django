@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>{{object.title}}</h3>
+    <p>Kategoria: {{object.category}}</p>
+    <p>Data dodania: {{object.created_at}} </p>
+    <p>Tresc: {{object.text}}</p>
+{% endblock %}
